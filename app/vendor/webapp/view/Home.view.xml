@@ -1,0 +1,172 @@
+<mvc:View
+    controllerName="com.app.vendor.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+>
+    <Page
+        id="intro"
+        title="{i18n>title}"
+        titleAlignment="Center"
+        titleLevel="H6"
+        class="pages"
+    >
+        <content>
+            <l:BlockLayout
+                id="fghj"
+                background="Light"
+                class="pages"
+            >
+                <l:BlockLayoutRow
+                    id="ghjk"
+                    class="pages"
+                >
+                    <l:BlockLayoutCell
+                        id="tyu"
+                        class="pages"
+                    >
+                        <FlexBox
+                            justifyContent="Center"
+                            alignItems="Center"
+                            class="pages"
+                            height="100%"
+                        >
+                            <items>
+                                <VBox class="bus">
+                                    <Image
+                                        id="idPinkBus"
+                                        src="Image/pink-bus.png"
+                                        alt="Delivery Bus"
+                                        width="500px"
+                                        height="500px"
+                                        class="sapUiMediumMarginRight"
+                                    />
+                                </VBox>
+
+                                <Panel
+                                    class="pages"
+                                    headerText="Book Your Slot Online here"
+                                    expandable="true"
+                                >
+                                    <VBox class="pages">
+                                        <Label
+                                            id="labelVehicleNum"
+                                            class="label"
+                                            text="Vehicle Number:"
+                                            textAlign="Center"
+                                        />
+                                        <Input
+                                            id="idVehicalNo1"
+                                            class="Input"
+                                            type="Text"
+                                            value=""
+                                            submit=".onVehicleNumberSubmit1"
+                                        />
+                                        <Label
+                                            id="labelDriverName"
+                                            class="label"
+                                            text="Driver Name:"
+                                            textAlign="Center"
+                                        />
+                                        <Input
+                                            id="idDriverName"
+                                            class="Input"
+                                            type="Text"
+                                            value=""
+                                        />
+                                        <Label
+                                            id="labelDriverPhNo"
+                                            class="label"
+                                            text="Driver Phone Number:"
+                                            textAlign="Center"
+                                        />
+                                        <Input
+                                            id="idPhone"
+                                            class="Input"
+                                            type="Tel"
+                                            value=""
+                                        />
+                                        <Label
+                                            id="labelVehicleEstTime"
+                                            class="label"
+                                            text="Vehicle Estimated Time:"
+                                            textAlign="Center"
+                                        />
+                                        <DateTimePicker
+                                            id="idEstimatedTime"
+                                            class="pages"
+                                            value="{path: '/dtValue', type: 'sap.ui.model.type.DateTime'}"
+                                        />
+                                        <HBox class="pages">
+                                            <Button
+                                                id="register"
+                                                class="register"
+                                                text="Register"
+                                                type="Success"
+                                                press="registerBtn"
+                                            />
+                                            <Button
+                                                id="unRegister"
+                                                class="register"
+                                                text="UnRegister"
+                                                type="Negative"
+                                                press="unRegister"
+                                            />
+                                        </HBox>
+                                    </VBox>
+                                    <MessageStrip
+                                        id="idMessageStrip8"
+                                        visible="false"
+                                        type="Success"
+                                        showIcon="true"
+                                        showCloseButton="true"
+                                    />
+                                </Panel>
+
+                                <Image
+                                    id="idhere"
+                                    src="Image/pointing-dialog.png"
+                                    alt="poniting dialog"
+                                    width="200px"
+                                    height="200px"
+                                    class="person"
+                                />
+                            </items>
+                        </FlexBox>
+                        <HBox class="hbox" >
+                            <Title
+                                id="idttl"
+                                level="H4"
+                                titleStyle="H4"
+                                text="Reserve your Plot Via Phone call "
+                                width="100%"
+                                textAlign="Center"
+                                class="mim1"
+                            />
+                            <Button
+                                id="idb"
+                                icon=""
+                                type="Transparent"
+                                tooltip="call"
+                                class="line-md--phone-call-loop mim2"
+                            />
+                            <Title
+                                id="idt"
+                                level="H4"
+                                titleStyle="H4"
+                                text=" 9014132395"
+                                width="100%"
+                                textAlign="Center"
+                                class="mim3"
+                            />
+                        </HBox>
+                    </l:BlockLayoutCell>
+                </l:BlockLayoutRow>
+            </l:BlockLayout>
+        </content>
+    </Page>
+</mvc:View>
